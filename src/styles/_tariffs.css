@@ -1,0 +1,273 @@
+.tariffs {
+    margin-top: var(--sections-spacing);
+    display: grid;
+    grid-template-columns: 360px auto;
+    gap: 48px;
+}
+    .tariffs__heading-column {
+
+    }
+        .tariffs__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            position: sticky;
+            top: calc(var(--header) + var(--tariffs-offset));
+        }
+
+    .tariffs__body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+        .tariffs__card {
+            padding: 24px 24px 32px;
+            background-color: #EAF8FF;
+            border-radius: 6px;
+        }
+
+        .tariffs__card:nth-child(even) {
+            background-color: var(--primary);
+            color: #FFFFFF;
+        }
+            .tariffs__sub-heading {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .tariffs__content {
+                margin-top: 24px;
+                max-width: 664px;
+            }
+
+            .tariffs__card:nth-child(even) .tariffs__content {
+                color: #CCE8F1;
+            }
+
+            .tariffs__footer {
+                margin-top: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+                .tariffs__price {
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 28px;
+                    white-space: nowrap;
+                }
+
+                .tariffs__callback {
+
+                }
+
+
+
+/* Залипание карточек */
+
+@media (740px <= width) {
+
+    /* Первый шаг залипания довольно простой: "position: sticky" с увеличивающимся
+     * для каждой карточки смещением в координате top (80px, 160px, 240px и т.д.):
+     */
+    .tariffs__card {
+        position: sticky;
+    }
+
+    .tariffs__card:nth-child(1) { top: calc(var(--header) + 1 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(2) { top: calc(var(--header) + 2 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(3) { top: calc(var(--header) + 3 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(4) { top: calc(var(--header) + 4 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(5) { top: calc(var(--header) + 5 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(6) { top: calc(var(--header) + 6 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(7) { top: calc(var(--header) + 7 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(8) { top: calc(var(--header) + 8 * var(--tariffs-offset)); }
+    .tariffs__card:nth-child(9) { top: calc(var(--header) + 9 * var(--tariffs-offset)); }
+
+
+    /* Отлипание */
+
+    /* Проблемы начинаются, когда секция проскроллирована до конца. Если ничего не предпинять,
+     * то position: sticky выключается и карточки остаются в самом низу .tariffs__body,
+     * и просто складываются как колода карт, одна за одругой по оси z. Более того у карточек
+     * разная высота и их либо совсем не видно за послдней карточко, либо видны кусочки.
+     *
+     * В этот момент вообще невозможно использовать position: sticky. Переключаемся в старый,
+     * добрый "position: absolute" для карточек внутри .tariffs__body с "position: relative".
+     * Чтобы при этом секция .tariffs__body не схлопнулась от отстутствия контента, жаба-скрипт
+     * явно проставит ей высоту, которая было изначально (что-нибудь типа 1582px). Карточкам же
+     * проставит координату "top" равную высоте .tariffs__body минус высота последний карточки.
+     * стилям же остаётся вытащить каждую карточку немного вверх: -80px, -160px, -240px и т.д.
+     */
+
+    .tariffs__body--fully-scrolled {
+        position: relative;
+        /* height: ... ;   ← значение из JS */
+    }
+        .tariffs__body--fully-scrolled .tariffs__card {
+            position: absolute;
+            left: 0;
+            right: 0;
+            /* top: ... ;  ← значение из JS */
+        }
+
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(1) { margin-top: 0; }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(2) { margin-top: calc(-1 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(3) { margin-top: calc(-2 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(4) { margin-top: calc(-3 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(5) { margin-top: calc(-4 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(6) { margin-top: calc(-5 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(7) { margin-top: calc(-6 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(8) { margin-top: calc(-7 * var(--tariffs-offset)); }
+        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(9) { margin-top: calc(-8 * var(--tariffs-offset)); }
+}
+
+
+
+@media (1700px <= width) {
+
+    .tariffs {
+        /*display: grid;*/
+        grid-template-columns: 493px auto;
+        /*gap: 48px;*/
+    }
+        .tariffs__heading-column {
+
+        }
+            .tariffs__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*position: sticky;*/
+                /*top: 40px;*/
+            }
+
+        .tariffs__body {
+
+        }
+            .tariffs__card {
+                /*margin-top: 10px;*/
+                /*padding: 24px 24px 32px;*/
+                /*background-color: #EAF8FF;*/
+                /*border-radius: 6px;*/
+            }
+
+            .tariffs__card:first-child {
+                /*margin-top: 0;*/
+            }
+
+            .tariffs__card:nth-child(even) {
+                /*background-color: var(--primary);*/
+                /*color: #FFFFFF;*/
+            }
+                .tariffs__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                    /*font-weight: 600;*/
+                    font-size: 32px;
+                    line-height: 38px;
+                }
+
+                .tariffs__content {
+                    /*margin-top: 24px;*/
+                    max-width: 911px;
+                }
+
+                .tariffs__card:nth-child(even) .tariffs__content {
+                    /*color: #CCE8F1;*/
+                }
+
+                .tariffs__footer {
+                    /*margin-top: 22px;*/
+                    /*display: flex;*/
+                    /*align-items: center;*/
+                    /*justify-content: space-between;*/
+                }
+                    .tariffs__price {
+                        /*font-weight: bold;*/
+                        font-size: 28px;
+                        line-height: 34px;
+                    }
+
+                    .tariffs__callback {
+
+                    }
+}
+
+
+
+@media (width < 740px) {
+
+    .tariffs {
+        display: block;
+        /*grid-template-columns: 360px auto;*/
+        /*gap: 48px;*/
+    }
+        .tariffs__heading-column {
+
+        }
+            .tariffs__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*position: sticky;*/
+                /*top: 40px;*/
+            }
+
+        .tariffs__body {
+            margin-top: 40px;
+            display: block;
+        }
+            .tariffs__card {
+                margin-top: 24px;
+                padding: 20px 16px 28px;
+                /*background-color: #EAF8FF;*/
+                /*border-radius: 6px;*/
+            }
+
+            .tariffs__card:first-child {
+                /*margin-top: 0;*/
+            }
+
+            .tariffs__card:nth-child(even) {
+                /*background-color: var(--primary);*/
+                /*color: #FFFFFF;*/
+            }
+                .tariffs__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                    /*font-weight: 600;*/
+                    font-size: 22px;
+                    line-height: 27px;
+                }
+
+                .tariffs__content {
+                    /*margin-top: 24px;*/
+                    /*max-width: 664px;*/
+                }
+
+                .tariffs__card:nth-child(even) .tariffs__content {
+                    /*color: #CCE8F1;*/
+                }
+
+                .tariffs__footer {
+                    /*margin-top: 22px;*/
+                    display: block;
+                    /*align-items: center;*/
+                    /*justify-content: space-between;*/
+                }
+                    .tariffs__price {
+                        /*font-weight: bold;*/
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+
+                    .tariffs__callback {
+                        margin-top: 24px;
+                    }
+                        .tariffs__callback.button,
+                        .tariffs__callback .button {
+                            width: 100%;
+                        }
+}
+

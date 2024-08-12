@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/Thing">
+    <head>
+        <meta charset="utf-8">
+        <title>Тепло Энерго Консалтинг</title>
+        <meta name="description" content="ООО «Теплоэнергоконсалт» — это небольшая компания с высококвалифицированными специалистами и богатым опытом в сфере малой энергетики и генерации">
+
+        <!-- schema.org (google plus) -->
+        <meta itemprop="url" content="https://proteplo-k.ru">
+        <meta itemprop="image" content="https://proteplo-k.ru/favicon/social-media-image-1200x675.jpg">
+        <meta itemprop="name" content="Тепло Энерго Консалтинг">
+        <meta itemprop="description" content="ООО «Теплоэнергоконсалт» — это небольшая компания с высококвалифицированными специалистами и богатым опытом в сфере малой энергетики и генерации">
+
+        <!-- ogp.me (facebook & vkontakte) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://proteplo-k.ru">
+        <meta property="og:image" content="https://proteplo-k.ru/favicon/social-media-image-1200x675.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="675">
+        <meta property="og:title" content="Тепло Энерго Консалтинг">
+
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="https://proteplo-k.ru">
+        <meta name="twitter:image" content="https://proteplo-k.ru/favicon/social-media-image-1200x675.jpg">
+        <meta name="twitter:title" content="Тепло Энерго Консалтинг">
+        <meta name="twitter:description" content="ООО «Теплоэнергоконсалт» — это небольшая компания с высококвалифицированными специалистами и богатым опытом в сфере малой энергетики и генерации">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#FFFFFF">
+
+        <!-- manifest -->
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#FFFFFF">
+        <meta name="msapplication-config" content="../browserconfig.xml">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+
+        <!-- assets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css?1723464174">
+
+        <!-- Fade in анимация при скроллировании
+            Этот скрипт критически важен и запускать его надо прям сразу.
+            Если что-то пошло бы не так, что элементы бы застряли в своем
+            состоянии перед анимацией (невидимые, смещённые вниз),
+            типа такого:
+            .person.fade-in {
+                opacity: 0;
+                transform: translateY(40px);
+                ...
+           }
+        -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const elements = document.querySelectorAll('.fade-in');
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                }, { threshold: 0.3 }); // порог, когда 30% элемента видимо
+                elements.forEach(element => observer.observe(element));
+            });
+        </script>
+
+    </head>
+    <body>
+
+
+
+        <!--[if IE]>
+            <div class="browser">
+                Вы используете устаревший браузер. Для корректной работы этого сайта и большинства других вам необходимо перейти на современный&nbsp;браузер.
+            </div>
+        <![endif]-->
+
+        <header class="header">
+            <div class="header__fixed-part">
+                <div class="header__panel">
+                    <div class="header__wrap container">
+                        <button class="header__burger" type="button">
+                            Показать меню
+                        </button>
+                        <div class="header__logo">
+                            Теплоэнергоконсалт
+                        </div>
+                        <div class="header__menu">
+                            <nav class="header__nav">
+                                <a class="header__link" href="#about">О компании</a>
+                                <a class="header__link" href="#tariffs">Тарифы</a>
+                                <a class="header__link" href="#guide">Этапы работы</a>
+                                <a class="header__link" href="#feedback">Отзывы</a>
+                                <a class="header__link" href="#contacts">Контакты</a>
+                            </nav>
+                            <div class="header__social-networks">
+                                <a class="net" href="#">
+                                    <svg class="net__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                                        <path d="m0 40 2.812-10.272a19.779 19.779 0 0 1-2.645-9.91C.172 8.892 9.063 0 19.988 0A19.694 19.694 0 0 1 34.01 5.813a19.706 19.706 0 0 1 5.8 14.024c-.005 10.928-8.897 19.82-19.822 19.82a19.833 19.833 0 0 1-9.48-2.414L0 40Zm10.995-6.345c2.793 1.658 5.46 2.652 8.987 2.653 9.08 0 16.476-7.39 16.481-16.475.004-9.103-7.358-16.483-16.468-16.486-9.087 0-16.478 7.39-16.482 16.473-.001 3.708 1.085 6.485 2.91 9.39l-1.665 6.08 6.237-1.635Zm18.978-9.107c-.123-.206-.453-.33-.95-.578-.495-.248-2.93-1.447-3.385-1.612-.453-.165-.783-.248-1.115.249-.33.495-1.28 1.611-1.568 1.941-.288.33-.578.372-1.073.124-.495-.249-2.092-.77-3.984-2.459-1.471-1.313-2.466-2.935-2.755-3.431-.288-.495-.03-.764.217-1.01.223-.222.495-.579.743-.869.252-.286.334-.493.5-.825.165-.33.084-.62-.041-.868-.125-.247-1.115-2.685-1.527-3.677-.403-.965-.812-.835-1.115-.85l-.95-.016c-.33 0-.867.123-1.32.62-.453.496-1.733 1.693-1.733 4.131 0 2.439 1.775 4.794 2.021 5.124.249.33 3.492 5.333 8.46 7.478 1.182.51 2.105.815 2.824 1.043 1.186.377 2.266.324 3.12.197.951-.142 2.93-1.198 3.343-2.355.413-1.158.413-2.15.288-2.357Z"/>
+                                    </svg>
+                                    <span class="visuallyhidden">
+                                        WhatsApp
+                                    </span>
+                                </a>
+                                <a class="net" href="#">
+                                    <svg class="net__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                                        <path d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20Zm-19.283-5.235c-1.946.809-5.833 2.484-11.664 5.024-.947.376-1.443.745-1.488 1.105-.076.609.686.848 1.724 1.175.141.044.288.09.438.139 1.02.332 2.394.72 3.108.735.648.014 1.371-.253 2.17-.8 5.447-3.678 8.259-5.537 8.435-5.577.125-.028.298-.063.415.04.117.104.105.301.093.354-.076.322-3.068 3.104-4.616 4.543-.483.449-.825.767-.895.84-.157.163-.317.317-.47.465-.95.914-1.66 1.6.039 2.72.817.538 1.47.983 2.122 1.427.712.485 1.422.969 2.341 1.571.234.154.458.313.676.468.829.591 1.573 1.122 2.493 1.037.534-.05 1.086-.552 1.366-2.05.663-3.542 1.965-11.217 2.266-14.38a3.527 3.527 0 0 0-.033-.787c-.027-.155-.082-.377-.285-.541-.24-.195-.61-.236-.775-.233-.752.013-1.906.415-7.46 2.725Z"/>
+                                    </svg>
+                                    <span class="visuallyhidden">
+                                        Телеграм
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="header__handler button button--smaller mfp-handler" href="#callback-popup">
+                            <span class="header__request">Заказать</span> Звонок
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque debitis est excepturi exercitationem iure nulla quas quia suscipit. Eius eligendi error, ex magni mollitia necessitatibus nesciunt provident quam sit unde! Alias dolor nostrum qui suscipit. Blanditiis consectetur doloremque id libero molestiae odio perspiciatis quasi, tempore? Commodi dolor doloremque earum hic minima natus omnis, qui suscipit voluptas voluptates. Adipisci aliquid aspernatur debitis distinctio dolor harum neque nobis, qui quibusdam voluptatibus! Accusantium aliquam blanditiis, commodi consequuntur dolores ducimus excepturi fuga harum hic laudantium libero magni nihil nostrum officiis perspiciatis, quisquam quos repellendus sed totam vero. Iste, rem sequi. Minus, quaerat.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque debitis est excepturi exercitationem iure nulla quas quia suscipit. Eius eligendi error, ex magni mollitia necessitatibus nesciunt provident quam sit unde! Alias dolor nostrum qui suscipit. Blanditiis consectetur doloremque id libero molestiae odio perspiciatis quasi, tempore? Commodi dolor doloremque earum hic minima natus omnis, qui suscipit voluptas voluptates. Adipisci aliquid aspernatur debitis distinctio dolor harum neque nobis, qui quibusdam voluptatibus! Accusantium aliquam blanditiis, commodi consequuntur dolores ducimus excepturi fuga harum hic laudantium libero magni nihil nostrum officiis perspiciatis, quisquam quos repellendus sed totam vero. Iste, rem sequi. Minus, quaerat.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque debitis est excepturi exercitationem iure nulla quas quia suscipit. Eius eligendi error, ex magni mollitia necessitatibus nesciunt provident quam sit unde! Alias dolor nostrum qui suscipit. Blanditiis consectetur doloremque id libero molestiae odio perspiciatis quasi, tempore? Commodi dolor doloremque earum hic minima natus omnis, qui suscipit voluptas voluptates. Adipisci aliquid aspernatur debitis distinctio dolor harum neque nobis, qui quibusdam voluptatibus! Accusantium aliquam blanditiis, commodi consequuntur dolores ducimus excepturi fuga harum hic laudantium libero magni nihil nostrum officiis perspiciatis, quisquam quos repellendus sed totam vero. Iste, rem sequi. Minus, quaerat.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque debitis est excepturi exercitationem iure nulla quas quia suscipit. Eius eligendi error, ex magni mollitia necessitatibus nesciunt provident quam sit unde! Alias dolor nostrum qui suscipit. Blanditiis consectetur doloremque id libero molestiae odio perspiciatis quasi, tempore? Commodi dolor doloremque earum hic minima natus omnis, qui suscipit voluptas voluptates. Adipisci aliquid aspernatur debitis distinctio dolor harum neque nobis, qui quibusdam voluptatibus! Accusantium aliquam blanditiis, commodi consequuntur dolores ducimus excepturi fuga harum hic laudantium libero magni nihil nostrum officiis perspiciatis, quisquam quos repellendus sed totam vero. Iste, rem sequi. Minus, quaerat.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque debitis est excepturi exercitationem iure nulla quas quia suscipit. Eius eligendi error, ex magni mollitia necessitatibus nesciunt provident quam sit unde! Alias dolor nostrum qui suscipit. Blanditiis consectetur doloremque id libero molestiae odio perspiciatis quasi, tempore? Commodi dolor doloremque earum hic minima natus omnis, qui suscipit voluptas voluptates. Adipisci aliquid aspernatur debitis distinctio dolor harum neque nobis, qui quibusdam voluptatibus! Accusantium aliquam blanditiis, commodi consequuntur dolores ducimus excepturi fuga harum hic laudantium libero magni nihil nostrum officiis perspiciatis, quisquam quos repellendus sed totam vero. Iste, rem sequi. Minus, quaerat.
+
+        <section class="tariffs container" id="tariffs">
+            <div class="tariffs__heading-column">
+                <h2 class="tariffs__heading title">
+                    Тарифы
+                </h2>
+            </div>
+            <div class="tariffs__body">
+                <article class="tariffs__card" style="top: 160px;">
+                    <h3 class="tariffs__sub-heading">
+                        Пакет Лайт
+                    </h3>
+                    <div class="tariffs__content wysiwyg">
+                        <ul>
+                            <li>Выполнение работ по ТЗ заказчика;</li>
+                            <li>Подбор трех блочно-модульных котельных в установленные сроки;</li>
+                            <li>Согласование условий с поставщиками;</li>
+                            <li>Определение сроков и стоимости проекта.</li>
+                        </ul>
+                    </div>
+                    <div class="tariffs__footer">
+                        <div class="tariffs__price">от 130 000 ₽</div>
+                        <a class="tariffs__callback button mfp-handler" href="#callback-popup">Оставить заявку</a>
+                    </div>
+                </article>
+                <article class="tariffs__card" style="top: 240px;">
+                    <h3 class="tariffs__sub-heading">
+                        Пакет Медиум
+                    </h3>
+                    <div class="tariffs__content wysiwyg">
+                        <ul>
+                            <li>Доработка ТЗ заказчика;</li>
+                            <li>Выезд на строительную площадку;</li>
+                            <li>Анализ технических параметров;</li>
+                            <li>Консультирование по оптимизации;</li>
+                            <li>Подбор основного оборудования (котлы, горелки, дымовые трубы);</li>
+                            <li>Составление итогового ТЗ и подбор трех вариантов реализации проекта с фиксацией стоимости на три месяца.</li>
+                        </ul>
+                    </div>
+                    <div class="tariffs__footer">
+                        <div class="tariffs__price">от 290 000 ₽</div>
+                        <a class="tariffs__callback button mfp-handler" href="#callback-popup">Оставить заявку</a>
+                    </div>
+                </article>
+                <article class="tariffs__card" style="top: 320px;">
+                    <h3 class="tariffs__sub-heading">
+                        Пакет Максимум
+                    </h3>
+                    <div class="tariffs__content wysiwyg">
+                        <ul>
+                            <li>Определение потребностей заказчика;</li>
+                            <li>Сбор и анализ данных;</li>
+                            <li>Проработка технической возможности реализации;</li>
+                            <li>Расчет потребности в тепле и топливе;</li>
+                            <li>Составление и согласование ТЗ;</li>
+                            <li>Подбор основного и вспомогательного оборудования;</li>
+                            <li>Предложение 3 вариантов реализации проекта (оборудование, сроки, стоимость) с фиксацией цен у поставщиков;</li>
+                            <li>Предварительные схемы и демонстрация выполненных объектов (презентация решений);</li>
+                            <li>Техническая поддержка при заключении договора.</li>
+                        </ul>
+                    </div>
+                    <div class="tariffs__footer">
+                        <div class="tariffs__price">от 490 000 ₽</div>
+                        <a class="tariffs__callback button mfp-handler" href="#callback-popup">Оставить заявку</a>
+                    </div>
+                </article>
+                <article class="tariffs__card" style="top: 400px;">
+                    <h3 class="tariffs__sub-heading">
+                        Пакет VIP
+                    </h3>
+                    <div class="tariffs__content wysiwyg">
+                        <ul>
+                            <li>Помощь в получении технических условий: подготовка запросов и консолидация данных;</li>
+                            <li>Участие в проектировании: контроль и оптимизация решений;</li>
+                            <li>Сопровождение экспертизы и контроль на каждой стадии производства;</li>
+                            <li>Проверка соответствия готового объекта техническим требованиям;</li>
+                            <li>Полное ведение проекта от имени заказчика и координация взаимодействия участников;</li>
+                            <li>Ежемесячная плата рассчитывается индивидуально.</li>
+                        </ul>
+                    </div>
+                    <div class="tariffs__footer">
+                        <div class="tariffs__price">от 150 000 ₽/меc</div>
+                        <a class="tariffs__callback button mfp-handler" href="#callback-popup">Оставить заявку</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias amet aspernatur autem beatae consectetur deserunt dicta dolor dolore dolorum eos eveniet fugiat impedit, incidunt iusto laudantium maiores molestias nesciunt nisi nulla, officia perferendis provident quasi qui quia quidem quisquam rerum similique tempora unde vel velit, veritatis? Ad aliquam aliquid amet aspernatur consectetur deserunt dicta dignissimos dolor doloremque doloribus eaque enim est et ex excepturi, exercitationem expedita facere fugiat impedit inventore laboriosam maxime, non optio placeat quae, quam quia quidem quod recusandae reiciendis repellendus reprehenderit soluta totam unde vel velit voluptatum. Facilis neque non pariatur provident rem. Aspernatur ea eaque enim excepturi pariatur praesentium quibusdam quo totam velit voluptatibus. Architecto consequuntur dicta et harum inventore laudantium, voluptate voluptates. Dicta doloremque, hic odio odit qui quidem repellendus totam voluptates. Accusantium aliquam eius hic laborum libero praesentium quae vitae voluptatem. Ab aspernatur commodi consequatur dicta hic nam optio suscipit? A ab amet consectetur debitis delectus, ea enim exercitationem fuga ipsam itaque iure laudantium repellat voluptates. Error fuga id nihil recusandae repellat, repellendus reprehenderit saepe tempore velit voluptatibus? Atque fugit illo iure nam officiis soluta! Assumenda, at atque cumque ducimus expedita fuga iure iusto laudantium quo sunt ut voluptates? Neque nulla, reiciendis!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias amet aspernatur autem beatae consectetur deserunt dicta dolor dolore dolorum eos eveniet fugiat impedit, incidunt iusto laudantium maiores molestias nesciunt nisi nulla, officia perferendis provident quasi qui quia quidem quisquam rerum similique tempora unde vel velit, veritatis? Ad aliquam aliquid amet aspernatur consectetur deserunt dicta dignissimos dolor doloremque doloribus eaque enim est et ex excepturi, exercitationem expedita facere fugiat impedit inventore laboriosam maxime, non optio placeat quae, quam quia quidem quod recusandae reiciendis repellendus reprehenderit soluta totam unde vel velit voluptatum. Facilis neque non pariatur provident rem. Aspernatur ea eaque enim excepturi pariatur praesentium quibusdam quo totam velit voluptatibus. Architecto consequuntur dicta et harum inventore laudantium, voluptate voluptates. Dicta doloremque, hic odio odit qui quidem repellendus totam voluptates. Accusantium aliquam eius hic laborum libero praesentium quae vitae voluptatem. Ab aspernatur commodi consequatur dicta hic nam optio suscipit? A ab amet consectetur debitis delectus, ea enim exercitationem fuga ipsam itaque iure laudantium repellat voluptates. Error fuga id nihil recusandae repellat, repellendus reprehenderit saepe tempore velit voluptatibus? Atque fugit illo iure nam officiis soluta! Assumenda, at atque cumque ducimus expedita fuga iure iusto laudantium quo sunt ut voluptates? Neque nulla, reiciendis!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias amet aspernatur autem beatae consectetur deserunt dicta dolor dolore dolorum eos eveniet fugiat impedit, incidunt iusto laudantium maiores molestias nesciunt nisi nulla, officia perferendis provident quasi qui quia quidem quisquam rerum similique tempora unde vel velit, veritatis? Ad aliquam aliquid amet aspernatur consectetur deserunt dicta dignissimos dolor doloremque doloribus eaque enim est et ex excepturi, exercitationem expedita facere fugiat impedit inventore laboriosam maxime, non optio placeat quae, quam quia quidem quod recusandae reiciendis repellendus reprehenderit soluta totam unde vel velit voluptatum. Facilis neque non pariatur provident rem. Aspernatur ea eaque enim excepturi pariatur praesentium quibusdam quo totam velit voluptatibus. Architecto consequuntur dicta et harum inventore laudantium, voluptate voluptates. Dicta doloremque, hic odio odit qui quidem repellendus totam voluptates. Accusantium aliquam eius hic laborum libero praesentium quae vitae voluptatem. Ab aspernatur commodi consequatur dicta hic nam optio suscipit? A ab amet consectetur debitis delectus, ea enim exercitationem fuga ipsam itaque iure laudantium repellat voluptates. Error fuga id nihil recusandae repellat, repellendus reprehenderit saepe tempore velit voluptatibus? Atque fugit illo iure nam officiis soluta! Assumenda, at atque cumque ducimus expedita fuga iure iusto laudantium quo sunt ut voluptates? Neque nulla, reiciendis!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias amet aspernatur autem beatae consectetur deserunt dicta dolor dolore dolorum eos eveniet fugiat impedit, incidunt iusto laudantium maiores molestias nesciunt nisi nulla, officia perferendis provident quasi qui quia quidem quisquam rerum similique tempora unde vel velit, veritatis? Ad aliquam aliquid amet aspernatur consectetur deserunt dicta dignissimos dolor doloremque doloribus eaque enim est et ex excepturi, exercitationem expedita facere fugiat impedit inventore laboriosam maxime, non optio placeat quae, quam quia quidem quod recusandae reiciendis repellendus reprehenderit soluta totam unde vel velit voluptatum. Facilis neque non pariatur provident rem. Aspernatur ea eaque enim excepturi pariatur praesentium quibusdam quo totam velit voluptatibus. Architecto consequuntur dicta et harum inventore laudantium, voluptate voluptates. Dicta doloremque, hic odio odit qui quidem repellendus totam voluptates. Accusantium aliquam eius hic laborum libero praesentium quae vitae voluptatem. Ab aspernatur commodi consequatur dicta hic nam optio suscipit? A ab amet consectetur debitis delectus, ea enim exercitationem fuga ipsam itaque iure laudantium repellat voluptates. Error fuga id nihil recusandae repellat, repellendus reprehenderit saepe tempore velit voluptatibus? Atque fugit illo iure nam officiis soluta! Assumenda, at atque cumque ducimus expedita fuga iure iusto laudantium quo sunt ut voluptates? Neque nulla, reiciendis!
+
+
+        <!-- jQuery dependant -->
+        <script src="vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Vanilla JS -->
+        <script src="vendors/swiper/swiper-bundle.min.js"></script>
+        <script src="vendors/countup/count-1.8.2.min.js"></script>
+<!--        <script src="scripts/scripts.js?1723464174"></script>-->
+
+    </body>
+</html>
+
+

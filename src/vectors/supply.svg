@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125" height="140" fill="none" viewBox="0 0 125 140">
+    <g stroke="#FFD19A" filter="url(#filter0_f_32_133)">
+        <path d="M0 0h44.033v44.033H0z" transform="matrix(.25882 .96593 -.96593 -.25882 57.668 -25.517)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.25882 .96593 -.7071 .7071 15.136 -36.913)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.96593 .25882 -.7071 .7071 26.532 5.619)"/>
+        <path d="M0 0h44.033v44.033H0z" transform="matrix(.25882 .96593 -.96593 -.25882 158.301 -18.292)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.25882 .96593 -.7071 .7071 115.768 -29.688)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.96593 .25882 -.7071 .7071 127.165 12.844)"/>
+        <path d="M0 0h44.033v44.033H0z" transform="matrix(.25882 .96593 -.96593 -.25882 111.597 28.412)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.25882 .96593 -.7071 .7071 69.065 17.016)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.96593 .25882 -.7071 .7071 80.461 59.548)"/>
+        <path d="M0 0h44.033v44.033H0z" transform="matrix(.25882 .96593 -.96593 -.25882 165.526 82.34)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.25882 .96593 -.7071 .7071 122.993 70.945)"/>
+        <path d="M0 0h44.033v22.016H0z" transform="matrix(.96593 .25882 -.7071 .7071 134.39 113.477)"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_32_133" width="524.05" height="524.05" x="-2.915" y="-273.268" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur result="effect1_foregroundBlur_32_133" stdDeviation="1"/>
+        </filter>
+    </defs>
+</svg>

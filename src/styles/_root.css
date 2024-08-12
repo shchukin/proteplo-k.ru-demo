@@ -1,0 +1,64 @@
+:root {
+    --font: "Montserrat", sans-serif;
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-hover: 100ms ease;
+    --transition-show: 800ms var(--ease-out-quint);
+    --image-fallback: #F3F5F4;
+    --container-padding: 40px;
+    --container-width: 1200px;
+    --action-color: #0D7FC5;
+    --action-color-hover: #2FA5ED;
+    --input-border: #FFFFFF;
+    --input-border-hover-and-focus: #FFFFFF;
+    --placeholder-color: #FFFFFF;
+    --disabled-background: #D4D4D4;
+    --disabled-color: #8F8F8F;
+    --error: #FF4444;
+    --primary: #0086BF;
+    --body-font-size: 18px;
+    --body-line-height: 22px;
+    --sections-spacing: 120px;
+    --header: 84px;
+    --tariffs-offset: 80px;
+    --fade-in-translate: 40px;
+}
+
+
+@media (1700px <= width) {
+
+    :root {
+        --container-width: 1600px;
+        --body-font-size: 20px;
+        --body-line-height: 24px;
+        --sections-spacing: 140px;
+        --header: 94px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    :root {
+        --container-width: auto;
+        --body-font-size: 16px;
+        --body-line-height: 20px;
+        --sections-spacing: 80px;
+        --header: 58px;
+    }
+}
+
+
+@media (350px <= width < 740px) {
+
+    :root {
+        --container-padding: 24px;
+    }
+}
+
+
+@media (width < 350px) {
+
+    :root {
+        --container-padding: 16px;
+    }
+}

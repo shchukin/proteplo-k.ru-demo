@@ -1,0 +1,85 @@
+
+/* Все десктопы: */
+
+@media (740px <= width) {
+
+    .guide {
+        margin-top: var(--sections-spacing);
+    }
+        .guide__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .guide__body {
+            margin-top: 60px;
+        }
+            .guide__body .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 24px;
+            }
+                .guide__body .swiper-slide--double {
+                    grid-column: span 2;
+                }
+
+                .guide__body .guide__navigation {
+                    display: none;
+                }
+
+
+
+    @media (1700px <= width) {
+
+        .guide {
+
+        }
+            .guide__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*text-align: center;*/
+            }
+
+            .guide__body {
+                /*margin-top: 60px;*/
+            }
+                .guide__body .swiper-wrapper {
+                    /*display: grid;*/
+                    /*grid-template-columns: repeat(4, minmax(0, 1fr));*/
+                    /*gap: 24px;*/
+                }
+                    .guide__body .swiper-slide--double {
+                        /*grid-column: span 2;*/
+                    }
+
+                    .guide__body .guide__navigation {
+                        /*display: none;*/
+                    }
+    }
+}
+
+
+
+/* смартфоны как обычно: */
+
+@media (width < 740px) {
+
+    .guide {
+        margin-top: var(--sections-spacing);
+    }
+        .guide__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .guide__body {
+            margin-top: 40px;
+        }
+            .guide__navigation {
+
+            }
+}
+
+

@@ -1,0 +1,139 @@
+.button {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    padding: 14px 24px;
+    min-width: 100px;
+    background-color: #FC8901;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--transition-hover);
+}
+
+.button:hover {
+    background-color: #FEBA66;
+}
+
+.button:active {
+    translate: 0 1px;
+    transition: none;
+}
+
+/* Заблокированная кнопка, но не:
+    button--loading
+    button--success
+    button--warning
+    (в этих случая атрибут disabled всё-равно нужен, но стили там будут свои)
+ */
+.button:disabled:not(.button--loading):not(.button--success):not(.button--warning),
+.button:disabled:not(.button--loading):not(.button--success):not(.button--warning):hover,
+.button:disabled:not(.button--loading):not(.button--success):not(.button--warning):active {
+    background-color: var(--disabled-background);
+    color: var(--disabled-color);
+    translate: none;
+    cursor: default;
+}
+
+
+
+@media (1700px <= width) {
+
+    .button {
+        padding: 16px 28px;
+        border-radius: 28px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+
+
+@media (width < 740px) {
+
+    .button {
+        padding: 12px 20px;
+        border-radius: 22px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+
+
+@keyframes button-loading-spin {
+    100% { transform: rotate(360deg); }
+}
+    .button--loading {
+        color: transparent;
+        pointer-events: none;
+    }
+        .button--loading::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            margin-left: -12px;
+            background-image: url("../vectors/button-loading.svg");
+            background-size: 32px 32px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            animation: button-loading-spin 1s steps(12) infinite;
+        }
+
+
+
+.button--success {
+    color: transparent;
+    pointer-events: none;
+}
+    .button--success::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        margin-left: -12px;
+        background-image: url("../vectors/button-success.svg");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+.button--warning {
+    color: transparent;
+    pointer-events: none;
+}
+    .button--warning::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        margin-left: -12px;
+        background-image: url("../vectors/button-warning.svg");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+

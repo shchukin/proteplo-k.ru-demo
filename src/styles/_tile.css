@@ -1,0 +1,153 @@
+.tile {
+    position: relative;
+    padding-bottom: 58px;
+}
+
+
+@media (740px <= width) {
+
+    .tile.fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1200ms var(--ease-out-quint),
+        transform 1200ms var(--ease-out-quint);
+    }
+
+    .tile.fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .swiper-slide:nth-child(1) .tile {  }
+    .swiper-slide:nth-child(2) .tile { transition-delay: 100ms; }
+    .swiper-slide:nth-child(3) .tile { transition-delay: 200ms; }
+    .swiper-slide:nth-child(4) .tile { transition-delay: 300ms; }
+}
+
+
+    .tile__body {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        min-height: 189px;
+        padding: 24px 16px;
+        background-image: url("../vectors/tile-laptop.svg");
+        background-size: 280px 189px;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .tile__action {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity var(--transition-hover);
+    }
+
+    .tile:hover .tile__action {
+        opacity: 100%;
+    }
+
+    .tile:focus-within .tile__action {
+        opacity: 100%;
+    }
+        .tile__action.button,
+        .tile__action .button {
+            position: absolute;
+            width: 100%;
+        }
+
+
+
+@media (1700px <= width) {
+
+
+    .tile {
+        /*position: relative;*/
+        padding-bottom: 66px;
+    }
+        .tile__body {
+            height: 212px;
+            background-image: url("../vectors/tile-monitor.svg");
+            background-size: 382px 212px;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .tile__action {
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*opacity: 0;*/
+            /*transition: opacity var(--transition-hover);*/
+        }
+
+        .tile:hover .tile__action {
+            /*opacity: 100%;*/
+        }
+
+        .tile:focus-within .tile__action {
+            /*opacity: 100%;*/
+        }
+            .tile__action.button,
+            .tile__action .button {
+                /*width: 100%;*/
+            }
+}
+
+
+@media (width < 740px) {
+
+    .tile {
+        /*position: relative;*/
+        padding-bottom: 0;
+    }
+        .tile__body {
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            gap: 15px;
+            min-height: 170px;
+            /*padding: 24px 16px;*/
+            /*background-image: url("../vectors/tile-laptop.svg");*/
+            /*background-size: 280px 189px;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: right top;*/
+            /*background-color: #FFFFFF;*/
+            /*border-radius: 8px;*/
+            /*font-weight: 600;*/
+            /*font-size: 20px;*/
+            /*line-height: 24px;*/
+        }
+
+        .tile__action {
+            position: static;
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            opacity: 100%;
+            margin-top: 8px;
+            /*transition: opacity var(--transition-hover);*/
+        }
+
+        .tile:hover .tile__action {
+            /*opacity: 100%;*/
+        }
+
+        .tile:focus-within .tile__action {
+            /*opacity: 100%;*/
+        }
+            .tile__action.button,
+            .tile__action .button {
+                position: static;
+                /*width: 100%;*/
+            }
+    }
+

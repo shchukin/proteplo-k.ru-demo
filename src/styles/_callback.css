@@ -1,0 +1,251 @@
+.callback {
+    margin-top: var(--sections-spacing);
+}
+    .callback__wrap {
+
+    }
+        .callback__inner {
+            padding: 60px 40px;
+            background-color: var(--primary);
+            background-image: url("../vectors/callback.svg");
+            background-size: 540px 255px;
+            background-repeat: no-repeat;
+            background-position: -98px bottom;
+            color: #FFFFFF;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: 447px 649px;
+            gap: 24px;
+        }
+            .callback__data {
+
+            }
+                .callback__heading {
+                    margin-top: -3px;
+                    margin-bottom: 0;
+                }
+
+                @media (740px <= width < 1700px) {
+                    .callback__heading {
+                        font-size: 42px;
+                    }
+                }
+
+                .callback__description {
+                    margin-top: 11px;
+                    max-width: 440px;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
+            .callback__form {
+
+            }
+                .callback__field {
+                    margin-top: 24px;
+                }
+
+                .callback__field:first-child {
+                    margin-top: 0;
+                }
+
+                .callback__footer {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 18px;
+                }
+                    .callback__agreement {
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-align: right;
+                    }
+
+                    .callback__submit {
+
+                    }
+
+                    .callback__submit.button,
+                    .callback__submit .button {
+                        width: 242px;
+                        flex-shrink: 0;
+                    }
+
+
+.callback--in-popup {
+    margin-top: 0;
+    width: 1200px;
+}
+    .callback--in-popup .callback__inner {
+        border-radius: 8px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+
+@media (1700px <= width) {
+
+    .callback {
+
+    }
+        .callback__wrap {
+
+        }
+            .callback__inner {
+                /*background-color: #0086BF;*/
+                /*background-image: url("../images/callback.svg");*/
+                /*background-size: 540px 255px;*/
+                /*background-repeat: no-repeat;*/
+                background-position: left bottom;
+                /*color: #FFFFFF;*/
+                /*border-radius: 8px;*/
+                /*display: grid;*/
+                grid-template-columns: 500px 744px;
+                justify-content: space-between;
+                /*gap: 24px;*/
+            }
+                .callback__data {
+
+                }
+                    .callback__heading {
+                        /*margin-top: -3px;*/
+                        /*margin-bottom: 0;*/
+                    }
+
+                    .callback__description {
+                        margin-top: 24px;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+
+                .callback__form {
+
+                }
+                    .callback__field {
+                        /*margin-top: 24px;*/
+                    }
+
+                    .callback__field:first-child {
+                        /*margin-top: 0;*/
+                    }
+
+                    .callback__footer {
+                        /*margin-top: 40px;*/
+                        /*display: flex;*/
+                        /*align-items: center;*/
+                        /*gap: 18px;*/
+                    }
+                        .callback__agreement {
+                            max-width: 400px;
+                            /*font-size: 15px;*/
+                            /*line-height: 18px;*/
+                            /*text-align: right;*/
+                        }
+
+                        .callback__submit {
+
+                        }
+
+                        .callback__submit.button,
+                        .callback__submit .button {
+                            /*width: 242px;*/
+                            /*flex-shrink: 0;*/
+                        }
+
+
+
+    .callback--in-popup {
+        width: 1400px;
+    }
+}
+
+
+
+@media (width < 740px) {
+
+    .callback {
+        padding-top: 43px;
+        padding-bottom: 116px;
+        background-color: var(--primary);
+        background-image: url("../vectors/callback-mobile.svg");
+        background-size: 740px 93px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+        .callback__wrap {
+
+        }
+            .callback__inner {
+                padding: 0;
+                background-color: transparent;
+                background-image: none;
+                /*color: #FFFFFF;*/
+                /*border-radius: 8px;*/
+                display: block;
+                /*grid-template-columns: 447px 649px;*/
+                /*gap: 24px;*/
+            }
+                .callback__data {
+
+                }
+                    .callback__heading {
+                        /*margin-top: -3px;*/
+                        /*margin-bottom: 0;*/
+                    }
+
+                    .callback__description {
+                        margin-top: 16px;
+                        /*max-width: 440px;*/
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+
+                .callback__form {
+                    margin-top: 40px;
+                }
+                    .callback__field {
+                        /*margin-top: 24px;*/
+                    }
+
+                    .callback__field:first-child {
+                        /*margin-top: 0;*/
+                    }
+
+                    .callback__footer {
+                        /*margin-top: 40px;*/
+                        display: flex;
+                        flex-direction: column;
+                        align-items: stretch;
+                        gap: 0;
+                    }
+                        .callback__agreement {
+                            margin-top: 8px;
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-align: left;
+                        }
+
+                        .callback__submit {
+                            order: -1;
+                        }
+
+                        .callback__submit.button,
+                        .callback__submit .button {
+                            width: 100%;
+                            /*flex-shrink: 0;*/
+                        }
+
+
+    .callback--in-popup {
+        border-radius: 8px;
+        width: 100%;
+        max-width: 366px;
+    }
+        .callback--in-popup .callback__inner {
+            padding-left: var(--container-padding);
+            padding-right: var(--container-padding);
+        }
+}
+

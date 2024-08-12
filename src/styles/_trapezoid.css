@@ -1,0 +1,13 @@
+.trapezoid {
+    width: 37px;
+    height: 18px;
+    background-image: url("../vectors/trapezoid.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.trapezoid--smaller {
+    width: 27px;
+    height: 13px;
+}

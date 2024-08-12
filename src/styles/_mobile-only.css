@@ -1,0 +1,10 @@
+.mobile-only {
+
+}
+
+@media (740px <= width) {
+
+    .mobile-only {
+        display: none;
+    }
+}

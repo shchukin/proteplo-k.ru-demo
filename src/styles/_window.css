@@ -1,0 +1,98 @@
+.window {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    border-radius: 4px;
+}
+    .window__close {
+        position: absolute;
+        right: 0 !important;
+        top: auto !important;
+        bottom: 100%;
+        width: 70px;
+        height: 100px;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        opacity: 1;
+    }
+
+        /* hover */
+        .window__close::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            border-radius: 50%;
+            transition: background-color var(--transition-hover);
+        }
+
+        .window__close:hover::before {
+            background-color: rgb(255 255 255 / 10%);
+        }
+
+        .window__close::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url("../vectors/cross.svg");
+            background-size: 32px 32px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+
+
+@media (width < 740px) {
+
+    .window {
+        /*position: relative;*/
+        /*display: inline-block;*/
+        /*vertical-align: top;*/
+        /*text-align: left;*/
+        /*border-radius: 4px;*/
+    }
+        .window__close {
+            position: absolute;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: auto;
+            width: 60px;
+            height: 60px;
+            /*text-indent: 200%;*/
+            /*white-space: nowrap;*/
+            /*overflow: hidden !important;*/
+            /*opacity: 1;*/
+        }
+
+            /* hover */
+            .window__close::before {
+                display: none;
+            }
+
+            .window__close::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-image: url("../vectors/cross.svg");
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+}
+

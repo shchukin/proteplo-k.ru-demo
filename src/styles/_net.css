@@ -1,0 +1,18 @@
+.net {
+    display: block;
+    width: fit-content;
+}
+
+    .net__icon {
+        vertical-align: top;
+        fill: var(--primary);
+        transition: fill var(--transition-hover);
+    }
+
+
+.net:hover {
+
+}
+    .net:hover .net__icon {
+        fill: #349ECE;
+    }

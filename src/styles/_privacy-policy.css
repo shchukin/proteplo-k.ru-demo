@@ -1,0 +1,95 @@
+.privacy-policy {
+    max-width: 1200px;
+    padding: 50px var(--container-padding) 80px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+    .privacy-policy__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .privacy-policy__content {
+        margin-top: 30px;
+    }
+
+
+@media (1700px <= width) {
+
+    .privacy-policy {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+        .privacy-policy__heading {
+
+        }
+
+        .privacy-policy__content {
+
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .privacy-policy {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+        .privacy-policy__heading {
+
+        }
+            .privacy-policy__heading.title,
+            .privacy-policy__heading .title {
+
+            }
+
+        .privacy-policy__content {
+            margin-top: 20px;
+        }
+}
+
+
+
+/* Слово конфиденциальности слишком длинное: */
+
+@media (400px <= width < 420px) {
+
+    .privacy-policy__heading.title,
+    .privacy-policy__heading .title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+
+@media (380px <= width < 400px) {
+
+    .privacy-policy__heading.title,
+    .privacy-policy__heading .title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+
+@media (360px <= width < 380px) {
+
+    .privacy-policy__heading.title,
+    .privacy-policy__heading .title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+
+@media (width < 360px) {
+
+    .privacy-policy__heading.title,
+    .privacy-policy__heading .title {
+        font-size: 21px;
+        line-height: 24px;
+    }
+}
+

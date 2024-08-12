@@ -1,0 +1,256 @@
+.quote {
+    margin-top: var(--sections-spacing);
+}
+    .quote__wrap {
+
+    }
+        .quote__body {
+            position: relative;
+            margin: 0;
+            padding: 44px 40px 48px;
+            min-height: 381px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            overflow: hidden; /* Обрезаем анимации */
+            color: #FFFFFF;
+        }
+            /* фон вытаскиваем в отдельный слой, чтобы можно было анимировать */
+            .quote__body::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url("../vectors/quote-background.svg");
+                background-size: 701px 450px;
+                background-repeat: no-repeat;
+                background-position: right -157px top;
+            }
+
+            .quote__text {
+                max-width: 760px;
+                margin: 0 0 0 -10px;
+                padding: 10px 0 10px 55px;
+                background-image: url("../vectors/quote-left.svg"), url("../vectors/quote-right.svg");
+                background-size: 50px 38px;
+                background-repeat: no-repeat;
+                background-position: left top, right bottom;
+                font-weight: 600;
+                font-style: italic;
+                font-size: 26px;
+                line-height: 34px;
+            }
+                .quote__text p {
+                    margin: 0;
+                }
+
+            .quote__caption {
+                margin-top: 30px;
+            }
+                .quote__photo {
+                    position: absolute;
+                    right: 11px;
+                    bottom: 0;
+                    vertical-align: top;
+                    width: 331px;
+                    height: 353px;
+                }
+
+                .quote__name {
+                    margin-top: 14px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 22px;
+                    line-height: 27px;
+                }
+
+                .quote__position {
+                    margin-top: 6px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #9CCFE9;
+                }
+
+
+
+@media (740px <= width) {
+
+    /* фон */
+    .quote.fade-in .quote__body::before {
+        opacity: 0;
+        transform: translateX(80px);
+        transition: opacity 2000ms var(--ease-out-quint),
+                    transform 1200ms var(--ease-out-quint);
+    }
+
+    .quote.fade-in.show .quote__body::before {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+    /* фото */
+    .quote.fade-in .quote__photo {
+        opacity: 0;
+        transform: translateX(140px);
+        transition: opacity 1600ms var(--ease-out-quint),
+                    transform 1600ms var(--ease-out-quint);
+        transition-delay: 300ms; /* фото выводится с задержкой (после фона) */
+    }
+
+    .quote.fade-in.show .quote__photo {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@media (1700px <= width) {
+
+    .quote {
+
+    }
+        .quote__wrap {
+
+        }
+            .quote__body {
+                /*position: relative;*/
+                /*margin: 0;*/
+                padding: 44px 40px 93px;
+                min-height: 450px;
+                /*background-color: var(--primary);*/
+                /*border-radius: 8px;*/
+                /*color: #FFFFFF;*/
+            }
+                .quote__body::before {
+                    /*background-image: url("../vectors/quote-background.svg");*/
+                    /*background-size: 701px 450px;*/
+                    /*background-repeat: no-repeat;*/
+                    background-position: right top;
+                }
+
+                .quote__text {
+                    max-width: 940px;
+                    margin: 0 0 0 -10px;
+                    padding: 10px 0 10px 70px;
+                    /*margin-left: -20px;*/
+                    /*background-image: url("../vectors/quote-left.svg"), url("../vectors/quote-right.svg");*/
+                    background-size: 62px 47px;
+                    /*background-repeat: no-repeat;*/
+                    /*background-position: left top, right bottom;*/
+                    /*font-weight: 600;*/
+                    /*font-style: italic;*/
+                    font-size: 32px;
+                    line-height: 39px;
+                }
+                    .quote__text p {
+                        /*margin: 0;*/
+                    }
+
+                .quote__caption {
+                    margin-top: 41px;
+                }
+                    .quote__photo {
+                        /*position: absolute;*/
+                        /*right: 11px;*/
+                        /*bottom: 0;*/
+                        /*vertical-align: top;*/
+                        width: 389px;
+                        height: 415px;
+                    }
+
+                    .quote__name {
+                        /*margin-top: 14px;*/
+                        /*font-weight: 600;*/
+                        /*font-style: normal;*/
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+
+                    .quote__position {
+                        /*margin-top: 6px;*/
+                        font-size: 18px;
+                        line-height: 22px;
+                        /*color: #9CCFE9;*/
+                    }
+}
+
+
+
+@media (width < 740px) {
+
+    .quote {
+        background-color: var(--primary);
+        background-image: url("../vectors/quote-background-mobile.svg");
+        background-size: 740px 323px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+        .quote__wrap {
+
+        }
+            .quote__body {
+                /*position: relative;*/
+                /*margin: 0;*/
+                padding: 40px 0 280px;
+                /*min-height: 381px;*/
+                background-color: transparent;
+                background-image: none;
+                /*border-radius: 8px;*/
+                /*color: #FFFFFF;*/
+                overflow: visible;
+            }
+                .quote__body::before {
+                    display: none;
+                }
+
+                .quote__text {
+                    /*max-width: 745px;*/
+                    /*margin: 0;*/
+                    padding-right: 20px;
+                    padding-left: var(--container-padding);
+                    margin-left: calc(-1 * var(--container-padding));
+                    /*background-image: url("../vectors/quote-left.svg"), url("../vectors/quote-right.svg");*/
+                    background-size: 30px 23px;
+                    /*background-repeat: no-repeat;*/
+                    /*background-position: left top, right bottom;*/
+                    /*font-weight: 600;*/
+                    /*font-style: italic;*/
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+                    .quote__text p {
+                        /*margin: 0;*/
+                    }
+
+                .quote__caption {
+                    margin-top: 24px;
+                    max-width: 280px;
+                }
+                    .quote__photo {
+                        position: absolute;
+                        /*right: 11px;*/
+                        /*bottom: 0;*/
+                        /*vertical-align: top;*/
+                        width: 240px;
+                        height: 256px;
+                    }
+
+                    .quote__name {
+                        /*margin-top: 14px;*/
+                        /*font-weight: 600;*/
+                        /*font-style: normal;*/
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    .quote__position {
+                        /*margin-top: 6px;*/
+                        /*font-size: 16px;*/
+                        /*line-height: 20px;*/
+                        /*color: #9CCFE9;*/
+                    }
+}
+

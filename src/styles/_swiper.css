@@ -1,0 +1,120 @@
+/*.swiper {*/
+
+/*}*/
+/*    .swiper-wrapper {*/
+/*        align-items: stretch;*/
+/*    }*/
+/*        .swiper-slide {*/
+/*            height: auto;*/
+/*        }*/
+
+
+
+
+/*    !* Точки *!*/
+
+/*    .swiper-pagination-bullets {*/
+/*        padding-top: 15px;*/
+/*        position: static;*/
+/*        display: flex;*/
+/*        align-items: stretch;*/
+/*        justify-content: center;*/
+/*    }*/
+/*        .swiper-pagination-bullet {*/
+/*            flex-shrink: 0;*/
+/*            margin: 0 !important;*/
+/*            background-color: transparent;*/
+/*            border-radius: 0;*/
+/*            padding: 15px;*/
+/*            width: auto;*/
+/*            height: auto;*/
+/*            opacity: 100%;*/
+/*            transition: background-color var(--transition-hover);*/
+/*        }*/
+/*            .swiper-pagination-bullet::after {*/
+/*                content: "";*/
+/*                flex-shrink: 0;*/
+/*                display: block;*/
+/*                width: 11px;*/
+/*                height: 11px;*/
+/*                background-color: var(--light-orange);*/
+/*                border-radius: 50%;*/
+/*            }*/
+
+/*            .swiper-pagination-bullet:hover::after {*/
+/*                background-color: var(--orange-90pct);*/
+/*            }*/
+
+/*        .swiper-pagination-bullet-active {*/
+/*            cursor: default !important;*/
+/*        }*/
+/*            .swiper-pagination-bullet-active::after,*/
+/*            .swiper-pagination-bullet-active:hover::after {*/
+/*                background-color: var(--orange);*/
+/*            }*/
+
+/*    @media (width < 740px) {*/
+
+/*        .swiper-pagination-bullet {*/
+/*            padding: 10px;*/
+/*        }*/
+/*    }*/
+
+
+
+/* Стрелочки */
+
+.swiper-navigation {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+}
+    .swiper-button {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color var(--transition-hover);
+    }
+
+    .swiper-button:not(.swiper-button-disabled):hover {
+        background-color: rgb(255 255 255 / 60%);
+        border-radius: 6px;
+    }
+
+    .swiper-button.swiper-button-disabled {
+        opacity: 50%;
+        cursor: default;
+    }
+        .swiper-arrow {
+            vertical-align: top;
+            fill: var(--primary);
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-button::after {
+            display: none;
+        }
+
+
+@media (width < 740px) {
+
+    .swiper-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-navigation {
+        padding-top: 16px;
+    }
+}
+

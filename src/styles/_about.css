@@ -1,0 +1,340 @@
+.about {
+    margin-top: var(--sections-spacing);
+    display: grid;
+    grid-template-columns: auto 476px;
+}
+    .about__body {
+
+    }
+        .about__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        .about__content {
+            margin-top: 60px;
+            padding-right: 34px;
+        }
+
+    .about__summary {
+        position: relative;
+    }
+        .about__stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+            .about__param {
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 49px;
+                text-align: center;
+                color: #0086BF;
+            }
+
+            .about__value {
+                margin-top: 6px;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+            }
+
+        .about__stat--projects {
+            position: absolute;
+            left: 25px;
+            top: -50px;
+            width: 222px;
+            height: 222px;
+            background-image: url("../vectors/about.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .about__stat--power {
+            position: absolute;
+            left: 214px;
+            top: 80px;
+            width: 262px;
+            height: 262px;
+            background-color: #0086BF;
+            border-radius: 50%;
+            color: #FFFFFF;
+        }
+            .about__stat--power .about__param {
+                color: inherit;
+            }
+
+        .about__stat--experience {
+            position: absolute;
+            left: -19px;
+            top: 207px;
+            width: 219px;
+            height: 219px;
+            border: 1px solid #65B6D6;
+            border-radius: 50%;
+        }
+
+
+
+@media (1700px <= width) {
+
+    .about {
+        /*display: grid;*/
+        grid-template-columns: auto 621px;
+    }
+        .about__body {
+
+        }
+            .about__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-weight: 800;*/
+                font-size: 32px;
+                line-height: 39px;
+            }
+
+            .about__content {
+                /*margin-top: 60px;*/
+                padding-right: 145px;
+            }
+
+        .about__summary {
+            /*position: relative;*/
+        }
+            .about__stat {
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+            }
+                .about__param {
+                    /*font-weight: 800;*/
+                    font-size: 44px;
+                    line-height: 54px;
+                    /*text-align: center;*/
+                }
+
+                .about__value {
+                    /*margin-top: 6px;*/
+                    /*font-size: 18px;*/
+                    /*line-height: 22px;*/
+                    /*text-align: center;*/
+                }
+
+            .about__stat--projects {
+                /*position: absolute;*/
+                left: 86px;
+                top: -7px;
+                width: 243px;
+                height: 243px;
+                background-image: url("../vectors/about-monitor.svg");
+                /*background-size: contain;*/
+                /*background-repeat: no-repeat;*/
+                /*background-position: center center;*/
+            }
+
+            .about__stat--power {
+                /*position: absolute;*/
+                left: 329px;
+                top: 123px;
+                width: 296px;
+                height: 296px;
+                /*background-color: #0086BF;*/
+                /*border-radius: 50%;*/
+                /*color: #FFFFFF;*/
+            }
+
+            .about__stat--experience {
+                /*position: absolute;*/
+                left: -69px;
+                /*top: 207px;*/
+                /*width: 219px;*/
+                /*height: 219px;*/
+                /*border: 1px solid #65B6D6;*/
+                /*border-radius: 50%;*/
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .about {
+        display: block;
+        /*grid-template-columns: auto 476px;*/
+    }
+        .about__body {
+
+        }
+            .about__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-weight: 800;*/
+                font-size: 19px;
+                line-height: 24px;
+            }
+
+            /* Слово "высококвалифицированными" не влезает */
+            @media (width < 370px) {
+                .about__heading {
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
+
+            @media (width < 340px) {
+                .about__heading {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+
+            .about__content {
+                margin-top: 24px;
+                padding-right: 0;
+            }
+
+        .about__summary {
+            margin-top: 28px;
+            /*position: relative;*/
+            margin-left: -8px;
+            margin-right: -8px;
+            width: 343px;
+            height: 472px;
+        }
+            .about__stat {
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+            }
+                .about__param {
+                    /*font-weight: 800;*/
+                    font-size: 38px;
+                    line-height: 46px;
+                    /*text-align: center;*/
+                    /*color: #0086BF;*/
+                }
+
+                .about__value {
+                    /*margin-top: 6px;*/
+                    font-size: 16px;
+                    line-height: 20px;
+                    /*text-align: center;*/
+                }
+
+            .about__stat--projects {
+                /*position: absolute;*/
+                left: auto;
+                right: 0;
+                top: 0;
+                width: 191px;
+                height: 191px;
+                background-image: url("../vectors/about-mobile.svg");
+                /*background-size: contain;*/
+                /*background-repeat: no-repeat;*/
+                /*background-position: center center;*/
+            }
+
+            .about__stat--power {
+                /*position: absolute;*/
+                left: auto;
+                right: 0;
+                top: 221px;
+                width: 251px;
+                height: 251px;
+                /*background-color: #0086BF;*/
+                /*border-radius: 50%;*/
+                /*color: #FFFFFF;*/
+            }
+                .about__stat--power .about__param {
+                    /*color: inherit;*/
+                }
+
+            .about__stat--experience {
+                /*position: absolute;*/
+                left: 0;
+                top: 106px;
+                width: 155px;
+                height: 155px;
+                /*border: 1px solid #65B6D6;*/
+                /*border-radius: 50%;*/
+            }
+
+
+        @media (width < 370px) {
+
+            .about__summary {
+                width: calc(100% + 16px);
+            }
+                .about__stat {
+
+                }
+                    .about__param {
+                        font-size: 34px;
+                        line-height: 40px;
+                    }
+
+                    .about__value {
+                        margin-top: -2px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                .about__stat--projects {
+                    width: 184px;
+                    height: 184px;
+                }
+
+                .about__stat--power {
+                    width: 244px;
+                    height: 244px;
+                }
+
+                .about__stat--experience {
+                    width: 134px;
+                    height: 134px;
+                }
+            }
+
+
+        @media (width < 350px) {
+
+            .about__summary {
+
+            }
+                .about__stat {
+
+                }
+                    .about__param {
+                        font-size: 34px;
+                        line-height: 40px;
+                    }
+
+                    .about__value {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                .about__stat--projects {
+                    width: 174px;
+                    height: 174px;
+                }
+
+                .about__stat--power {
+                    width: 234px;
+                    height: 234px;
+                }
+
+                .about__stat--experience {
+                    width: 124px;
+                    height: 124px;
+                }
+            }
+}
+

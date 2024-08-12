@@ -1,0 +1,177 @@
+.experience {
+    margin-top: var(--sections-spacing);
+}
+    .experience__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .experience__description {
+        max-width: 689px;
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .experience__partners {
+        margin-top: 60px;
+        position: relative;
+    }
+        /* Небольшая коррекция на высоту анимации var(--fade-in-translate), чтобы она не обрезалась слайдером: */
+        .experience__partners .swiper {
+            margin-bottom: calc(-1 * var(--fade-in-translate));
+        }
+
+        .experience__partners .swiper-slide {
+            padding-bottom: var(--fade-in-translate);
+        }
+
+        .experience__partners-navigation {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            margin-bottom: 69px;
+        }
+
+    .experience__solutions-heading {
+        margin-top: var(--sections-spacing);
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 34px;
+        user-select: none;
+    }
+
+    .experience__solutions-descriptions {
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .experience__solutions-body {
+        margin-top: 60px;
+        margin-bottom: -58px;
+    }
+
+        /* Небольшая коррекция на высоту анимации var(--fade-in-translate), чтобы она не обрезалась слайдером: */
+        .experience__solutions-body .swiper {
+            margin-bottom: calc(-1 * var(--fade-in-translate));
+        }
+
+        .experience__solutions-body .swiper-slide {
+            padding-bottom: var(--fade-in-translate);
+        }
+
+
+        .experience__partners-navigation {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            margin-bottom: 69px;
+        }
+
+        .experience__solutions-navigation {
+
+        }
+
+        @media (740px <= width) {
+            .experience__solutions-navigation {
+                display: none;
+            }
+        }
+
+
+
+@media (1700px <= width) {
+
+    .experience {
+
+    }
+        .experience__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .experience__description {
+            margin-top: 40px;
+            max-width: 701px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .experience__partners {
+
+        }
+            .experience__partners-navigation {
+
+            }
+
+        .experience__solutions-heading {
+            /*margin-bottom: 0;*/
+            /*font-weight: 800;*/
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        .experience__solutions-descriptions {
+            /*margin-top: 24px;*/
+            font-size: 22px;
+            line-height: 27px;
+        }
+
+        .experience__solutions-body {
+            /*margin-top: 60px;*/
+            margin-bottom: -66px;
+        }
+            .experience__solutions-navigation {
+
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .experience {
+
+    }
+        .experience__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .experience__description {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .experience__partners {
+             margin-top: 40px;
+        }
+            .experience__partners-navigation {
+                position: static;
+                margin: 0;
+            }
+
+        .experience__solutions-heading {
+            /*margin-bottom: 0;*/
+            /*font-weight: 800;*/
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .experience__solutions-descriptions {
+            /*margin-top: 24px;*/
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .experience__solutions-body {
+            margin-top: 40px;
+        }
+            .experience__solutions-navigation {
+                display: flex;
+                justify-content: center;
+            }
+}
+
