@@ -67,62 +67,59 @@
 
 /* Залипание карточек */
 
-@media (740px <= width) {
-
-    /* Первый шаг залипания довольно простой: "position: sticky" с увеличивающимся
-     * для каждой карточки смещением в координате top (80px, 160px, 240px и т.д.):
-     */
-    .tariffs__card {
-        position: sticky;
-    }
-
-    .tariffs__card:nth-child(1) { top: calc(var(--header) + 1 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(2) { top: calc(var(--header) + 2 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(3) { top: calc(var(--header) + 3 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(4) { top: calc(var(--header) + 4 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(5) { top: calc(var(--header) + 5 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(6) { top: calc(var(--header) + 6 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(7) { top: calc(var(--header) + 7 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(8) { top: calc(var(--header) + 8 * var(--tariffs-offset)); }
-    .tariffs__card:nth-child(9) { top: calc(var(--header) + 9 * var(--tariffs-offset)); }
-
-
-    /* Отлипание */
-
-    /* Проблемы начинаются, когда секция проскроллирована до конца. Если ничего не предпинять,
-     * то position: sticky выключается и карточки остаются в самом низу .tariffs__body,
-     * и просто складываются как колода карт, одна за одругой по оси z. Более того у карточек
-     * разная высота и их либо совсем не видно за послдней карточко, либо видны кусочки.
-     *
-     * В этот момент вообще невозможно использовать position: sticky. Переключаемся в старый,
-     * добрый "position: absolute" для карточек внутри .tariffs__body с "position: relative".
-     * Чтобы при этом секция .tariffs__body не схлопнулась от отстутствия контента, жаба-скрипт
-     * явно проставит ей высоту, которая было изначально (что-нибудь типа 1582px). Карточкам же
-     * проставит координату "top" равную высоте .tariffs__body минус высота последний карточки.
-     * стилям же остаётся вытащить каждую карточку немного вверх: -80px, -160px, -240px и т.д.
-     */
-
-    .tariffs__body--fully-scrolled {
-        position: relative;
-        /* height: ... ;   ← значение из JS */
-    }
-        .tariffs__body--fully-scrolled .tariffs__card {
-            position: absolute;
-            left: 0;
-            right: 0;
-            /* top: ... ;  ← значение из JS */
-        }
-
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(1) { margin-top: 0; }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(2) { margin-top: calc(-1 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(3) { margin-top: calc(-2 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(4) { margin-top: calc(-3 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(5) { margin-top: calc(-4 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(6) { margin-top: calc(-5 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(7) { margin-top: calc(-6 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(8) { margin-top: calc(-7 * var(--tariffs-offset)); }
-        .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(9) { margin-top: calc(-8 * var(--tariffs-offset)); }
+/* Первый шаг залипания довольно простой: "position: sticky" с увеличивающимся
+ * для каждой карточки смещением в координате top (80px, 160px, 240px и т.д.):
+ */
+.tariffs__card {
+    position: sticky;
 }
+
+.tariffs__card:nth-child(1) { top: calc(var(--header) + 1 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(2) { top: calc(var(--header) + 2 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(3) { top: calc(var(--header) + 3 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(4) { top: calc(var(--header) + 4 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(5) { top: calc(var(--header) + 5 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(6) { top: calc(var(--header) + 6 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(7) { top: calc(var(--header) + 7 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(8) { top: calc(var(--header) + 8 * var(--tariffs-offset)); }
+.tariffs__card:nth-child(9) { top: calc(var(--header) + 9 * var(--tariffs-offset)); }
+
+
+/* Отлипание */
+
+/* Проблемы начинаются, когда секция проскроллирована до конца. Если ничего не предпинять,
+ * то position: sticky выключается и карточки остаются в самом низу .tariffs__body,
+ * и просто складываются как колода карт, одна за одругой по оси z. Более того у карточек
+ * разная высота и их либо совсем не видно за послдней карточко, либо видны кусочки.
+ *
+ * В этот момент вообще невозможно использовать position: sticky. Переключаемся в старый,
+ * добрый "position: absolute" для карточек внутри .tariffs__body с "position: relative".
+ * Чтобы при этом секция .tariffs__body не схлопнулась от отстутствия контента, жаба-скрипт
+ * явно проставит ей высоту, которая было изначально (что-нибудь типа 1582px). Карточкам же
+ * проставит координату "top" равную высоте .tariffs__body минус высота последний карточки.
+ * стилям же остаётся вытащить каждую карточку немного вверх: -80px, -160px, -240px и т.д.
+ */
+
+.tariffs__body--fully-scrolled {
+    position: relative;
+    /* height: ... ;   ← значение из JS */
+}
+    .tariffs__body--fully-scrolled .tariffs__card {
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* top: ... ;  ← значение из JS */
+    }
+
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(1) { margin-top: 0; }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(2) { margin-top: calc(-1 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(3) { margin-top: calc(-2 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(4) { margin-top: calc(-3 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(5) { margin-top: calc(-4 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(6) { margin-top: calc(-5 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(7) { margin-top: calc(-6 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(8) { margin-top: calc(-7 * var(--tariffs-offset)); }
+    .tariffs__body--fully-scrolled .tariffs__card:nth-last-child(9) { margin-top: calc(-8 * var(--tariffs-offset)); }
 
 
 
@@ -216,17 +213,12 @@
 
         .tariffs__body {
             margin-top: 40px;
-            display: block;
+            gap: 24px;
         }
             .tariffs__card {
-                margin-top: 24px;
                 padding: 20px 16px 28px;
                 /*background-color: #EAF8FF;*/
                 /*border-radius: 6px;*/
-            }
-
-            .tariffs__card:first-child {
-                /*margin-top: 0;*/
             }
 
             .tariffs__card:nth-child(even) {
