@@ -237,6 +237,11 @@
                     /*margin-top: 24px;*/
                     /*max-width: 664px;*/
                 }
+                    .tariffs__content.wysiwyg,
+                    .tariffs__content .wysiwyg {
+                        font-size: calc(var(--body-font-size) - 1px);
+                        line-height: calc(var(--body-line-height) - 2px);
+                    }
 
                 .tariffs__card:nth-child(even) .tariffs__content {
                     /*color: #CCE8F1;*/
